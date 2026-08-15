@@ -11,6 +11,25 @@ In this ‘Data Analysis’ project, we’ll analyze `AdventureWorks`, an online
 ⚡PowerBI Service [For making the report accessible on the web without PowerBI login]  
 ⚡Multipage fully Interactive Report [For drawing insights and analysis]  
 
+## Skills Demonstrated
+
+This project showcases end-to-end Business Intelligence development skills aligned with professional BI Developer roles:
+
+| Category | Skills Applied |
+|:--|:--|
+| **Power BI** | Power BI Desktop, DAX measures, Power Query (M), data modeling, interactive multi-page reports |
+| **Data Modeling** | Dimensional modeling (Star Schema), fact/dimension tables, relationship design |
+| **SQL Server** | T-SQL, database views, query optimization, data extraction |
+| **Performance** | Optimized data model for report performance, efficient DAX calculations |
+| **Version Control** | Git / GitHub for source control and project documentation |
+| **Documentation** | Structured technical documentation (requirements, solution design, EDA)|
+
+
+*Built as part of a growing Business Intelligence portfolio focused on the banking, finance, and retail sectors.*
+
+
+
+
 ## Table of Contents
 - [Introduction](#introduction) 
 - [Objective](#objective)

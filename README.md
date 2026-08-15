@@ -3,7 +3,7 @@
 # Sales/Customer/Product Analysis
 In this ‘Data Analysis’ project, we’ll analyze `AdventureWorks`, an online retailer's raw sales data, and draw meaningful insights.
 
-<img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/title.png?raw=true" width="1000" height="800" />
+<img src="images/title.png" width="1000" height="800" />
 
 ## Features
 ⚡Microsoft SQL Server / SQL / T-SQL [For building the datasource]  
@@ -47,13 +47,13 @@ AW-DA01-REQ-6|Sales Rep|Ability to dynamically slice/dice/filter and analyze dat
 AdventureWorks makes data available strictly through its `datawarehouse-database` for any data analysis. The real-time transaction database is not directly accessible.
 ### AdventureWorks Datawarehouse
 data warehouse-database schema is shown below... <br>
-<img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/DW%20Schema.png?raw=true" width="400" height="600" />
+<img src="images/DW%20Schema.png" width="400" height="600" />
 
 The complete datawarehouse-database in the form of Microsoft SQL Server  `database-backup`  can be downloaded from [here](https://drive.google.com/file/d/1azhAQjbAV7pgh_A0CSKAErneHr5L4zUu/view?usp=sharing), *refer the [How To Use](#how-to-use) section for more details in terms of how to restore the downloaded backup to re-create the database*.
 
 ### Budget Data
 AdventureWorks allocates a monthly budget for sales. The company sets a monthly target against which sales performance for a given month is expected to be measured as a key KPI for success. The budget/target is decided and fixed yearly in advance. Note that the budget is decided by the company's top management once a year, and it's not a part datawarehouse-database. AdventureWorks have made the budget available in the form of an XLS file; a snapshot of the 2016/2017 budget is shown below... <br>
-<img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/budget.png?raw=true" width="400" height="600" />
+<img src="images/budget.png" width="400" height="600" />
 
 ## Solution Approach
   
@@ -202,7 +202,7 @@ The SQL used for creating the required views is in this repo's `sales-analysis.s
 ### Data Cleaning and Transform [PowerQuery Editor]
 1. We import the  `vw_customer,` `vw_product,` `vw_date` and `vw_internet_sales` as `Dim_Customer,` `Dim_Product,` `Dim_Date` and `Fact_Internet_Sales` query from SQL Server database (one example is shown below)...
 
- <img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/import-sql.png?raw=true"/>
+ <img src="images/import-sql.png"/>
  
 2. We import the `budget` data from provided XLS file as a `Fact_Budget` query.
 
@@ -213,7 +213,7 @@ The imported data is relatively clean and well organized; hence only a little wo
 ### Data Model Creation [PowerBI Desktop]
 the data model is based on the four SQL views (three dimensions and one fact) we imported from the database and the budget table we imported from the XLS file. Imported views and budget tables are not implicitly related; hence, PowerBI cannot correctly establish the relationship between them; this needs to be done manually in the PowerBI Desktop data model. Once done, they are linked together by logical relationship to form a `star schema.` The resultant data model is shown below...
 
-<img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/data-model.png?raw=true"/>
+<img src="images/data-model.png"/>
 
 **NOTE:**  *The prefix `DIM` denotes the dimension table, and `FACT` is the fact table.*
 
@@ -223,17 +223,17 @@ Three interactive reports/dashboard (report pages) will be created to implement 
 #### 1. Executive Summary Report [AW-DA01-SOL-1]
 This high-level report shows the overall sales figures, top customers, top products, and Sales Vs. Budget KPI at a glance.
 
-<img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/exec-summary-page.png?raw=true"/>
+<img src="images/exec-summary-page.png"/>
 
 #### 2. Customer Analysis Report [AW-DA01-SOL-2]  
 This more granular detailed report analyses the sales data from the company's customers' perspective.
  
- <img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/cust-analysis-page.png?raw=true"/>
+ <img src="images/cust-analysis-page.png"/>
  
 #### 3. Product Analysis Report [AW-DA01-SOL-3]  
 This detailed report analyses the sales data from the company's products perspective.
  
- <img src="https://github.com/sssingh/sales-customer-product-analysis-powerbi/blob/main/images/prod-analysis-page.png?raw=true"/>
+ <img src="images/prod-analysis-page.png"/>
 
 ## How To Use
 ### Read-only access via the web (Recommended)
